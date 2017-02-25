@@ -1,3 +1,22 @@
+# Executables
+*.exe
+*.out
+*.app
+
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.unityproj
+.DS_Store
+/FlappyBird/Library/FailedAssetImports.txt
+/FlappyBird/Library/cache/
+/FlappyBird/Library/previews/
+/FlappyBird/Library/ScriptAssemblies/
+/FlappyBird/obj
+/FlappyBird/Temp
+/FlappyBird/Assets/Plugins
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
