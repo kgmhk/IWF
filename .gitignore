@@ -66,3 +66,6 @@ Temporary Items
 .apdisk
 FlappyBird/Library/CurrentLayout.dwlt
 FlappyBird/Library/CurrentLayout.dwlt
+*.meta
+*.csproj
+FlappyBird/FlappyBird.Editor.csproj
