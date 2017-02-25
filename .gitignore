@@ -1,18 +1,20 @@
 # Executables
-*.exe
-*.out
-*.app
+/FlappyBird/*.exe
+/FlappyBird/*.out
+/FlappyBird/*.app
 
-*.sln
-*.userprefs
-*.csproj
-*.pidb
-*.unityproj
-.DS_Store
+/FlappyBird/*.sln
+/FlappyBird/*.userprefs
+/FlappyBird/*.csproj
+/FlappyBird/*.pidb
+/FlappyBird/*.unityproj
+/FlaapyBird/.DS_Store
+/FlappyBird/Library/
 /FlappyBird/Library/FailedAssetImports.txt
 /FlappyBird/Library/cache/
 /FlappyBird/Library/previews/
 /FlappyBird/Library/ScriptAssemblies/
+/FlappyBird/Library/UnityAssemblies/
 /FlappyBird/obj
 /FlappyBird/Temp
 /FlappyBird/Assets/Plugins
