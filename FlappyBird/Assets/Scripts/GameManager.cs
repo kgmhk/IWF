@@ -33,8 +33,9 @@ public class GameManager : MonoBehaviour {
 
 	void Update(){
         
-
+       
         if (Input.GetMouseButtonDown (0) && ready == true) {
+            print("branch test");
 			ready = false;
             InvokeRepeating ("MakeCactus", 1f, waitingTime);
 			Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
