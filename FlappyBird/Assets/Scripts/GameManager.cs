@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
+<<<<<<< HEAD
         if (!Social.localUser.authenticated)
             Social.localUser.Authenticate(LoginCallBackGPGS);
 
@@ -52,6 +53,12 @@ public class GameManager : MonoBehaviour {
             print("desktop branch test");
             playBtn.SetActive(false);
             leaderboardBtn.SetActive(false);
+=======
+        
+       
+        if (Input.GetMouseButtonDown (0) && ready == true) {
+            print("desktop branch test");
+>>>>>>> 8ba7fc97b5a94f7b9a9928795ad50c33faf9a8c8
 			ready = false;
             InvokeRepeating ("MakeCactus", 1f, waitingTime);
 			Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
