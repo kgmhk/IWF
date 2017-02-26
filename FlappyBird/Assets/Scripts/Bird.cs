@@ -14,7 +14,7 @@ public class Bird : MonoBehaviour {
 
 	void Update () {
 		if (GameManager.manager.end == false){
-			if (Input.GetMouseButtonDown(0) && this.transform.position.y < 5f) {
+			if (Input.GetMouseButtonDown(0) && !GameManager.manager.end && this.transform.position.y < 5f) {
 				GetComponent<Rigidbody>().velocity = new Vector3 (0, 0, 0);
 				GetComponent<Rigidbody>().AddForce(0, jumpPower, 0, ForceMode.VelocityChange);
 				GetComponent<AudioSource>().Play();

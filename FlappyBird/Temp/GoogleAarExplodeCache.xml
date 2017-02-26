@@ -55,4 +55,39 @@
     <bundleId>com.gkwak.iwf</bundleId>
     <path>Assets/Plugins/Android\support-v4-24.0.0.aar</path>
   </explodeData>
+  <explodeData>
+    <aar>Assets/Plugins/Android\play-services-auth-9.6.1.aar</aar>
+    <modificationTime>2016-09-24T16:48:30.4847301+09:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.gkwak.iwf</bundleId>
+    <path>Assets/Plugins/Android\play-services-auth-9.6.1.aar</path>
+  </explodeData>
+  <explodeData>
+    <aar>Assets/Plugins/Android\play-services-auth-base-9.6.1.aar</aar>
+    <modificationTime>2016-09-24T16:48:56.3513789+09:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.gkwak.iwf</bundleId>
+    <path>Assets/Plugins/Android\play-services-auth-base-9.6.1.aar</path>
+  </explodeData>
+  <explodeData>
+    <aar>Assets/Plugins/Android\play-services-drive-9.6.1.aar</aar>
+    <modificationTime>2016-09-24T16:48:58.0919151+09:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.gkwak.iwf</bundleId>
+    <path>Assets/Plugins/Android\play-services-drive-9.6.1.aar</path>
+  </explodeData>
+  <explodeData>
+    <aar>Assets/Plugins/Android\play-services-games-9.6.1.aar</aar>
+    <modificationTime>2016-09-24T16:48:50.2592733+09:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.gkwak.iwf</bundleId>
+    <path>Assets/Plugins/Android\play-services-games-9.6.1.aar</path>
+  </explodeData>
+  <explodeData>
+    <aar>Assets/Plugins/Android\play-services-nearby-9.6.1.aar</aar>
+    <modificationTime>2016-09-24T16:48:38.5486721+09:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.gkwak.iwf</bundleId>
+    <path>Assets/Plugins/Android\play-services-nearby-9.6.1.aar</path>
+  </explodeData>
 </aars>
