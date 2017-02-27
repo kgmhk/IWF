@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bird : MonoBehaviour {
 
-	public float jumpPower = 5f;
+	public float jumpPower = 4f;
 	public GameObject imageBird;
 	public Vector3 lookDirection;
 	public static Bird bird;
@@ -14,7 +14,8 @@ public class Bird : MonoBehaviour {
 
 	void Update () {
 		if (GameManager.manager.end == false){
-			if (Input.GetMouseButtonDown(0) && !GameManager.manager.end && this.transform.position.y < 5f) {
+			if (Input.GetMouseButtonDown(0) && GameManager.manager.start && !GameManager.manager.end && this.transform.position.y < 5f) {
+                print("clock Jump");
 				GetComponent<Rigidbody>().velocity = new Vector3 (0, 0, 0);
 				GetComponent<Rigidbody>().AddForce(0, jumpPower, 0, ForceMode.VelocityChange);
 				GetComponent<AudioSource>().Play();

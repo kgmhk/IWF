@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 	public float waitingTime = 1.5f;
 	public static GameManager manager;
 	public bool ready = false;
+    public bool start = false;
 	public bool end = false;
     public bool bonusGame = false;
     public bool continueGame = false;
@@ -45,7 +46,6 @@ public class GameManager : MonoBehaviour {
     }
 
 	void Update(){
-<<<<<<< HEAD
         if (!Social.localUser.authenticated)
             Social.localUser.Authenticate(LoginCallBackGPGS);
 
@@ -53,34 +53,23 @@ public class GameManager : MonoBehaviour {
             print("desktop branch test");
             playBtn.SetActive(false);
             leaderboardBtn.SetActive(false);
-=======
-        
-       
-        if (Input.GetMouseButtonDown (0) && ready == true) {
-            print("desktop branch test");
->>>>>>> 8ba7fc97b5a94f7b9a9928795ad50c33faf9a8c8
+            start = true;
 			ready = false;
             InvokeRepeating ("MakeCactus", 1f, waitingTime);
 			Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
-            //iTween.FadeTo(readyImage01, iTween.Hash("alpha", 0,"time", 1.50f));
-			//iTween.FadeTo(readyImage02, iTween.Hash("alpha", 0, "time", 1.0f));
-
-            //iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 255, "delay", 1, "time", 0.5f));
+            Bird.bird.gameObject.GetComponent<Rigidbody>().AddForce(0, 5f, 0, ForceMode.VelocityChange);
             iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 0, "delay", 0, "time", 0.5f));
             iTween.MoveTo(finalWindow, iTween.Hash("y", -5, "delay", 0, "time", 0.5f));
         }
 
         if (continueGame == true)
         {
-            
+            start = true;
             bonusGame = true;
             continueGame = false;
             InvokeRepeating("MakeCactus", 1f, waitingTime);
             Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
-            //iTween.FadeTo(readyImage01, iTween.Hash("alpha", 0, "time", 1.50f));
-            //iTween.FadeTo(readyImage02, iTween.Hash("alpha", 0, "time", 1.0f));
-
-            //iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 255, "delay", 1, "time", 0.5f));
+            Bird.bird.gameObject.GetComponent<Rigidbody>().AddForce(0, 5f, 0, ForceMode.VelocityChange);
             iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 0, "delay", 0, "time", 0.5f));
             iTween.MoveTo(finalWindow, iTween.Hash("y", -5, "delay", 0, "time", 0.5f));
 
@@ -103,7 +92,7 @@ public class GameManager : MonoBehaviour {
         {
             continueBtn.SetActive(true);
         }
-
+        start = false;
         end = true;
 		CancelInvoke ("MakeCactus");
         iTween.ShakePosition (Camera.main.gameObject, iTween.Hash("x", 0.2,"y",0.2,"time",0.5f));
