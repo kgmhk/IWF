@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
 		manager = this;
         bonusGame = false;
         playBtn.SetActive(true);
-        leaderboardBtn.SetActive(true);
+        //leaderboardBtn.SetActive(true);
 
         PlayGamesPlatform.Activate();
         //GPGSMng.GetInstance.InitializeGPGS(); // 초기화
@@ -79,6 +79,10 @@ public class GameManager : MonoBehaviour {
 
     public void LoginCallBackGPGS(bool result)
     {
+        if(result)
+        {
+            leaderboardBtn.SetActive(true);
+        }
     }
 
     void MakeCactus(){
