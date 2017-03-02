@@ -39,10 +39,16 @@ public class GameManager : MonoBehaviour {
 		manager = this;
         bonusGame = false;
         playBtn.SetActive(true);
-        //leaderboardBtn.SetActive(true);
-
+        
         PlayGamesPlatform.Activate();
-        //GPGSMng.GetInstance.InitializeGPGS(); // 초기화
+
+        if (Social.localUser.authenticated)
+            Invoke("ShowLeaderBoardBtn", 0.5f);
+    }
+
+    void ShowLeaderBoardBtn()
+    {
+        leaderboardBtn.SetActive(true);
     }
 
 	void Update(){
@@ -79,7 +85,7 @@ public class GameManager : MonoBehaviour {
 
     public void LoginCallBackGPGS(bool result)
     {
-        if(result)
+        if(result && !start)
         {
             leaderboardBtn.SetActive(true);
         }
