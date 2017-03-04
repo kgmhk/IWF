@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public bool continueGame = false;
 
 	public GameObject cactus;
+    public GameObject missile;
 	public GameObject readyImage01;
 	public GameObject readyImage02;
 	public GameObject gameOverImage;
@@ -62,7 +63,8 @@ public class GameManager : MonoBehaviour {
             start = true;
 			ready = false;
             InvokeRepeating ("MakeCactus", 1f, waitingTime);
-			Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
+            InvokeRepeating("MakeMissiles", 1f, waitingTime);
+            Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
             Bird.bird.gameObject.GetComponent<Rigidbody>().AddForce(0, 5f, 0, ForceMode.VelocityChange);
             iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 0, "delay", 0, "time", 0.5f));
             iTween.MoveTo(finalWindow, iTween.Hash("y", -5, "delay", 0, "time", 0.5f));
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour {
             bonusGame = true;
             continueGame = false;
             InvokeRepeating("MakeCactus", 1f, waitingTime);
+            InvokeRepeating("MakeMissiles", 1f, waitingTime);
             Bird.bird.gameObject.GetComponent<Rigidbody>().useGravity = true;
             Bird.bird.gameObject.GetComponent<Rigidbody>().AddForce(0, 5f, 0, ForceMode.VelocityChange);
             iTween.FadeTo(gameOverImage, iTween.Hash("alpha", 0, "delay", 0, "time", 0.5f));
@@ -95,6 +98,11 @@ public class GameManager : MonoBehaviour {
 		Instantiate (cactus);
 	}
 
+    void MakeMissiles()
+    {
+        Instantiate (missile);
+    }
+
 	public void GameOver(){
 
         // unity Ads check
@@ -105,6 +113,7 @@ public class GameManager : MonoBehaviour {
         start = false;
         end = true;
 		CancelInvoke ("MakeCactus");
+        CancelInvoke("MakeMissiles");
         iTween.ShakePosition (Camera.main.gameObject, iTween.Hash("x", 0.2,"y",0.2,"time",0.5f));
 		iTween.FadeTo(gameOverImage, iTween.Hash("alpha",255,"delay",1,"time",0.5f));
 		iTween.MoveTo (finalWindow, iTween.Hash ("y", 1, "delay", 1.3f, "time", 0.5f));
