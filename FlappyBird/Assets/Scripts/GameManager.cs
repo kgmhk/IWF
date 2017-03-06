@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour {
     public GameObject continueBtn;
     public GameObject playBtn;
     public GameObject leaderboardBtn;
+    public GameObject titleText;
 
 	public AudioClip deathSound;
 	public AudioClip goalSound;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour {
 		manager = this;
         bonusGame = false;
         playBtn.SetActive(true);
+        titleText.SetActive(true);
         
         PlayGamesPlatform.Activate();
 
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour {
         if (ready == true) {
             print("desktop branch test");
             playBtn.SetActive(false);
+            titleText.SetActive(false);
             leaderboardBtn.SetActive(false);
             start = true;
 			ready = false;

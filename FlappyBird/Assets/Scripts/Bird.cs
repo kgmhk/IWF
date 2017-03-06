@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Bird : MonoBehaviour {
 
-	public float jumpPower = 4f;
+	public float jumpPower = 5f;
 	public GameObject imageBird;
 	public Vector3 lookDirection;
 	public static Bird bird;
@@ -34,6 +34,12 @@ public class Bird : MonoBehaviour {
 			lookDirection = new Vector3(0, 0, -90);
 			GameManager.manager.GameOver();
 		}
+        else if (Target.tag == "Missile") {
+            print("tag Missile");
+            GetComponent<Rigidbody>().velocity = new Vector3(0, -3, 0);
+            lookDirection = new Vector3(0, 0, -90);
+            GameManager.manager.GameOver();
+        }
 		else if (Target.tag == "Goal"){
 			GameManager.manager.GetScore();
 		}
