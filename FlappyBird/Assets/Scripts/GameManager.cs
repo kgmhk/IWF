@@ -87,8 +87,15 @@ public class GameManager : MonoBehaviour {
 
             continueBtn.SetActive(false);
         }
+
+        QuitAndroid();
     }
 
+    void QuitAndroid()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
     public void LoginCallBackGPGS(bool result)
     {
         if(result && !start)
