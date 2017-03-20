@@ -8,3 +8,7 @@ and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0
 and.ClientId=
 proj.requireGPlus=false
 android.SetupDone=true
+ios.ClientId=663870125506-4ed4akso4nis6u3buvsbu3b6vd498e1p.apps.googleusercontent.com
+ios.BundleId=com.gkwak.iwf
+ios.ResourceData=%23define+CLIENT_ID+%40%22663870125506-4ed4akso4nis6u3buvsbu3b6vd498e1p.apps.googleusercontent.com%22%0a%23define+BUNDLE_ID+%40%22com.gkwak.iwf%22%0a%23define+ACH_10_SCORE+%40%22CgkIwuv4jakTEAIQAw%22%0a%23define+ACH_100_SCORE+%40%22CgkIwuv4jakTEAIQBA%22%0a%23define+ACH_200_SCORE+%40%22CgkIwuv4jakTEAIQBQ%22%0a%23define+ACH_300_SCORE+%40%22CgkIwuv4jakTEAIQBg%22%0a%23define+ACH_400_SCORE+%40%22CgkIwuv4jakTEAIQBw%22%0a%23define+LEAD_IWF+%40%22CgkIwuv4jakTEAIQAQ%22%0a
+ios.SetupDone=true

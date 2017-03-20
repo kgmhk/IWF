@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using GoogleMobileAds.Api;
-using UnityEngine.Advertisements;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames;
+using UnityEngine.Advertisements;
 
 public class GameManager : MonoBehaviour {
 
