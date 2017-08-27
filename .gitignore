@@ -10,6 +10,8 @@
 /FlappyBird/[Bb]uild/
 /FlappyBird/[Bb]uilds/
 /FlappyBird/Assets/AssetStoreTools*
+/FlappyBird/iwf/
+/FlappyBird/iwf_1/
 
 
 # Visual Studio 2015 cache directory

@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using GoogleMobileAds.Api;
-using GooglePlayGames.BasicApi;
-using GooglePlayGames;
 using UnityEngine.Advertisements;
 
 public class GameManager : MonoBehaviour {
@@ -42,27 +40,14 @@ public class GameManager : MonoBehaviour {
         bonusGame = false;
         playBtn.SetActive(true);
         titleText.SetActive(true);
-        
-        PlayGamesPlatform.Activate();
-
-        if (Social.localUser.authenticated)
-            Invoke("ShowLeaderBoardBtn", 0.5f);
-    }
-
-    void ShowLeaderBoardBtn()
-    {
-        leaderboardBtn.SetActive(true);
+      
     }
 
 	void Update(){
-        if (!Social.localUser.authenticated)
-            Social.localUser.Authenticate(LoginCallBackGPGS);
-
         if (ready == true) {
             print("desktop branch test");
             playBtn.SetActive(false);
             titleText.SetActive(false);
-            leaderboardBtn.SetActive(false);
             start = true;
 			ready = false;
             InvokeRepeating ("MakeCactus", 1f, waitingTime);
@@ -95,13 +80,6 @@ public class GameManager : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
-    }
-    public void LoginCallBackGPGS(bool result)
-    {
-        if(result && !start)
-        {
-            leaderboardBtn.SetActive(true);
-        }
     }
 
     void MakeCactus(){
